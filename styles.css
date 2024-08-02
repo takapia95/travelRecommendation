@@ -1,0 +1,249 @@
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+.item p {
+    margin-top: 10px; /* Space between image and description */
+    text-align: center; /* Center the description text */
+    color: #fff; /* Adjust color if background is dark */
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.search-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+}
+
+.search-container button {
+    padding: 6px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #ddd;
+}
+
+/* Background and Main Content Styles */
+.background {
+    display: flex;
+    justify-content: space-between; /* Create space between sections */
+    padding: 20px;
+    position: relative; /* Relative positioning for absolute elements */
+    background-image: url('travel-agent-GettyImages-1211719627-4b924cc562fe4ab4b137b6e4ea9d401d.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+
+}
+
+.intro, .company-info, .mission-vision, .team, .contact-form {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* Social Media Styles */
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #ddd;
+}
+
+.about-us {
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.company-info, .mission-vision, .team, .contact-info {
+    margin-bottom: 20px;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 20px;
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.team-member img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .contact-info, footer .social-media {
+    margin-bottom: 10px;
+}
+
+/* Add styles for the dynamically generated content */
+.recommendations-container {
+    flex: 1;
+  
+    justify-content: space-around;
+}
+
+.item {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 8px;
+    max-width: 300px;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.loading-indicator {
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Styles for the image box */
+.image-box {
+    flex: 1;
+    width: 1200px; /* Width of the box */
+    height: 400px; /* Height of the box */
+    border: 2px solid #ddd; /* Border around the box */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for visibility */
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+}
+
+.image-box img {
+    width: 100%;
+    height: 50%; /* Adjust height to fit two images in the box */
+    object-fit: cover; /* Cover the box while maintaining aspect ratio */
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .team {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .team {
+        grid-template-columns: 1fr;
+    }
+}
